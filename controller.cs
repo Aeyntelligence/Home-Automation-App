@@ -2,7 +2,7 @@ using System.IO.Ports;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SerialController : MonoBehaviour
+public class controller : MonoBehaviour
 {
     SerialPort sp = new SerialPort("COM3", 9600); // CHANGE COM PORT
 
