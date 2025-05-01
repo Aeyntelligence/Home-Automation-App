@@ -1,4 +1,4 @@
-#Smart Home Automation System (Unity + Arduino)
+Project : Smart Home Automation System (Unity + Arduino)
 
 A desktop-based smart home simulation built using Unity (C#), Arduino (C++), and Serial Communication.
 Control lights and fans via a graphical interface with real-time hardware interaction.
