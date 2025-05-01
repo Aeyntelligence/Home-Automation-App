@@ -64,23 +64,23 @@ In Hierarchy:
   - FanOffBtn
 - Change button Text values accordingly
 
-Step 3: Import the Script
+ 3: Import the Script
 - Create a folder: Assets/Scripts/
-- Add a new C# script: Controller.cs
+- Add a new C# script: controller.cs
 
-Step 4: Link Buttons to Code
+4: Link Buttons to Code
 - Create an empty GameObject: Right-click → Create Empty → Name it Manager
 - Drag Controller.cs onto Manager
 - Select each button → In Button (Script) section:
   - Click + under OnClick()
   - Drag Manager into the object field
   - Choose corresponding method:
-    - LightOnBtn → Controller.LightOn()
-    - LightOffBtn → Controller.LightOff()
-    - FanOnBtn → Controller.FanOn()
-    - FanOffBtn → Controller.FanOff()
+    - LightOnBtn → controller.LightOn()
+    - LightOffBtn → controller.LightOff()
+    - FanOnBtn → controller.FanOn()
+    - FanOffBtn → controller.FanOff()
 
-Step 5: Enable Port Support
+5: Enable Port Support
 - Go to Edit > Project Settings > Player > Other Settings
 - Set Api Compatibility Level to .NET Framework (not .NET Standard)
 - Save & restart Unity
