@@ -1,0 +1,86 @@
+#Smart Home Automation System (Unity + Arduino)
+
+A desktop-based smart home simulation built using Unity (C#), Arduino (C++), and Serial Communication.
+Control lights and fans via a graphical interface with real-time hardware interaction.
+
+#Smart Home Automation System (Unity + Arduino)
+
+A desktop-based smart home simulation built using Unity (C#), Arduino (C++), and Serial Communication.
+Control lights and fans via a graphical interface with real-time hardware interaction.
+
+## Features
+
+- Turn ON/OFF appliances from a Unity UI
+- Real-time serial communication between Unity and Arduino
+- Modular C# code structure for adding more devices
+- Beginner-friendly wiring and hardware setup
+
+## Technologies Used
+
+- Unity 2D (C#)
+- Arduino Uno (C++)
+- SerialPort Communication
+- Windows/macOS/Linux (depends on COM port configuration)
+
+## Hardware Requirements
+
+| Component       | Quantity | Notes                            |
+|------------------|----------|----------------------------------|
+| Arduino Uno/Nano | 1        | USB connection to PC             |
+| LEDs             | 2        | For Light and Fan simulation     |
+| Resistors        | 2        | 220Ω each                        |
+| Breadboard       | 1        |                                   |
+| Jumper Wires     | 6–8      |                                   |
+
+## Arduino Wiring
+
+| Arduino Pin | Connected To | Description        |
+|-------------|--------------|--------------------|
+| 7           | LED1 + Resistor | Light Simulation   |
+| 8           | LED2 + Resistor | Fan Simulation     |
+| GND         | Common Ground | Both LEDs          |
+
+## Features
+
+- Turn ON/OFF appliances from a Unity UI
+- Real-time serial communication between Unity and Arduino
+- Modular C# code structure for adding more devices
+- Beginner-friendly wiring and hardware setup
+
+# Setup Instructions
+
+Step 1: Create a New Unity 2D Project
+- Open Unity Hub → New Project → 2D Core
+- Name it SmartHomeAutomation
+
+Step 2: Setup Canvas & Buttons
+In Hierarchy:
+- Right-click → UI → Canvas
+- Right-click Canvas → UI → Button (Create 4 buttons)
+- Rename buttons to:
+  - LightOnBtn
+  - LightOffBtn
+  - FanOnBtn
+  - FanOffBtn
+- Change button Text values accordingly
+
+Step 3: Import the Script
+- Create a folder: Assets/Scripts/
+- Add a new C# script: Controller.cs
+
+Step 4: Link Buttons to Code
+- Create an empty GameObject: Right-click → Create Empty → Name it Manager
+- Drag Controller.cs onto Manager
+- Select each button → In Button (Script) section:
+  - Click + under OnClick()
+  - Drag Manager into the object field
+  - Choose corresponding method:
+    - LightOnBtn → Controller.LightOn()
+    - LightOffBtn → Controller.LightOff()
+    - FanOnBtn → Controller.FanOn()
+    - FanOffBtn → Controller.FanOff()
+
+Step 5: Enable Port Support
+- Go to Edit > Project Settings > Player > Other Settings
+- Set Api Compatibility Level to .NET Framework (not .NET Standard)
+- Save & restart Unity
